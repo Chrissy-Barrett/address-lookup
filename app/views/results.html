@@ -1,0 +1,18 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+{{ govukPanel({
+  titleText: "Post code " + data.postcode,
+  html: "Easting and Northing<br><strong>"+ data.location | dump +"</strong>"
+}) }}
+
+   <a href="/location">try another location</a>
+  </div>
+</div>
+
+{% endblock %}
